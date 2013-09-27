@@ -1,19 +1,28 @@
 class Car
-  attr_accessor :color, :seating_material
-  attr_reader   :max_speed
+  attr_accessor :make, :model, :color, :interior, :max_speed
 
-  def initialize(max_speed, color, seating_material)
-    @max_speed = max_speed
+  def initialize(make, model, color, interior, max_speed)
+    @make = make
+    @model = model
     @color = color
-    @seating_material = seating_material
+    @interior = interior
+    @max_speed = max_speed
   end
 end
 
 class Tesla < Car
-  @max_speed = 130.0
+  def initialize(model, color, interior)
+    super('Tesla', model, color, interior, 130.0)
+  end
 end
   
 class Yugo < Car
-  @max_speed = 86.0
+  def initialize(model, color, interior)
+    super('Yugo', model, color, interior, 86.0)
+  end
 end
 
+model_s = Tesla.new('Model S', 'silver', 'leather')
+cabrio  = Yugo.new('Cabrio', 'blue', 'cloth')
+puts model_s.make, model_s.model, model_s.color, model_s.interior, model_s.max_speed, "\n"
+puts cabrio.make, cabrio.model, cabrio.color, cabrio.interior, cabrio.max_speed
