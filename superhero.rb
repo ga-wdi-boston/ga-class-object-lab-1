@@ -16,13 +16,13 @@ class Human
 	def eat
 		stamina = 0
 		return "I am eating"
-		return stamina += 1
+		#return stamina += 1
 	end
 
 end
 
 module SuperHero
-	class Superhero < Human
+	#class Superhero < Human
 		def fly
 			return "I am flying!!"
 		end
@@ -34,38 +34,38 @@ module SuperHero
 		def breathe_jello
 			return "I am breathing jello!"
 		end
-	end
+	#end
 	
 end
 # #So okay, I have a class of muggle. Upon creating a new Muggle
 # I have to define children, skin color and nationality. 
 # However, Muggles are humans and I want them to have a name, age and gender.
 # How do I do this?
-#How do I get muggles to learn fly?
+#HELP! Also, how do I let muggles only have fly and not the other super modules?
+
 class Muggle < Human
 	include SuperHero
-	attr_accessor :children, :skin_color, :nationality, :stamina
+	attr_accessor :children, :skin_color, :nationality
 	def initialize(children, skin_color, nationality)
 		@children = children
 		@skin_color = skin_color
 		@nationality = nationality
-		@stamina = stamina
+		#@stamina = stamina
 	end
 
 	#can I only use modules from SuperHero within a new module in Muggle class?
-	def fly
-		fly
-	end
-
 
 end
 
-binding.pry
+
 
 class Wizard < Human
+	include SuperHero
 end
 
 
-# m1 = Muggle.new('Haggard', 80,'male')
-# puts m1.name
-# puts m1.shoot_web
+gorbert = Muggle.new('12', 'Dark Vermillion','Giant')
+severus = Wizard.new('Snape','50','Male..Maybe')
+binding.pry
+
+
