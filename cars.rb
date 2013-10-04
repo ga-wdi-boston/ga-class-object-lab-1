@@ -22,6 +22,7 @@ class Honda < Car
 	def initialize(model, year)
 		@model = model
 		@year = year
+	
 	end
 
 end
@@ -29,13 +30,15 @@ end
 class Ferrari < Car
 	attr_accessor :model, :year
 
-	def initialize(model, year)
+	def initialize(model, year, max_speed, color)
 		@model = model
 		@year = year
+
 	end
 #HELP! Why does the max speed for any ferraris I create return nil?
 	
 end
+binding.pry
 
 car1 = Honda.new("CR-C","2005")
 car2 = Ferrari.new("Model-1","2010")
