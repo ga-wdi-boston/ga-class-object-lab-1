@@ -2,9 +2,10 @@
 
 ## 1. Superhero
 - Define a Human class.  It should have attributes like name, age, gender, etc.
-- Define a Superhero class with Superhero methods like fly, shoot_web, etc.
-- Instantiate several human classes
-- Extend a few of them with Superhero methods
+- Define a Superhero class with Superhero methods like fly, shoot_web, etc. They also inherit from Humans
+- Instantiate several human objects
+- Instantiate several superhuman objects
+- Run a few methods on each
 
 ## 2. Car
 - Define a Car class.  It should have attributes like max_speed, color, seating_material, etc.
